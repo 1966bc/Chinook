@@ -2,7 +2,7 @@
 [![Python 3](https://img.shields.io/badge/python-3%20-blue.svg)](https://www.python.org/downloads/)
 [![Tkinter](https://img.shields.io/badge/Tkinter%20-green.svg)](https://docs.python.org/3/library/tk.html)
 
-How create a full GUI application with Python and Tkinter
+How create a full GUI application with Python Sqlite and Tkinter.
 
 ![alt tag](https://user-images.githubusercontent.com/5463566/150774070-2d3216f6-4b93-4ee4-9874-e6dbfb5e5fa8.png)
 
@@ -12,6 +12,7 @@ Winter 2022
 
 - Python version 3.9.2
 - Tkinter patchlevel 8.6.11
+- Sqlite version 3.34.1
 
 Chinook is a sample database available as an alternative to the Northwind database, being ideal for self education.
 
