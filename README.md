@@ -10,6 +10,9 @@ Developend on Debian Release 11 (bullseye) 64-bit.
 
 Winter 2022
 
+- Python version 3.9.2
+- Tkinter patchlevel 8.6.11
+
 Chinook is a sample database available as an alternative to the Northwind database, being ideal for self education.
 
 Chinook data model represents a digital media store.
