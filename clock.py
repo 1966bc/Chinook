@@ -1,11 +1,11 @@
-#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 #-----------------------------------------------------------------------------
-# project:  tkinterlite
+# project:  chinook
 # authors:  1966bc
 # mailto:   [giuseppecostanzi@gmail.com]
 # modify:   hiems MMXXI
-#------------------------------------------------------------------------------
-""" This is the clock module of Tkinterlite."""
+#-----------------------------------------------------------------------------
+""" This is the clock module."""
 import threading
 import queue
 import datetime
