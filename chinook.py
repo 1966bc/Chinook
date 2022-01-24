@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #-----------------------------------------------------------------------------
-# project:  tkinterlite
+# project:  chinook
 # authors:  1966bc
 # mailto:   [giuseppecostanzi@gmail.com]
-# modify:   hiems MMXX
+# modify:   hiems MMXXI
 #-----------------------------------------------------------------------------
 import sys
 import profile
