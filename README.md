@@ -1,8 +1,6 @@
 # The-Chinook-Sample-Database-GUI
 The Chinook Sample Database GUI developed in Tkinter 
 
-# The Chinook Sample Database GUI
-
 ![alt tag](https://user-images.githubusercontent.com/5463566/150774070-2d3216f6-4b93-4ee4-9874-e6dbfb5e5fa8.png)
 
 Developend on Debian Release 11 (bullseye) 64-bit.
