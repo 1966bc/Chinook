@@ -13,6 +13,8 @@ Chinook data model represents a digital media store.
 
 I modified the tables, adopting a naming convention different from the original.
 
+For example I put all the names of the fields in lowercase and added a status field on all the tables.
+
 In this project you can see various programming techniques with Tkinter and Python.
 
 To run the project, execute chinook.py
