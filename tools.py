@@ -28,7 +28,6 @@ class Tools:
         y = (container.winfo_screenheight() - container.winfo_reqheight()) / 2
         container.geometry("+%d+%d" % (x, y))
 
-
     def cols_configure(self, w):
 
         w.columnconfigure(0, weight=0)
@@ -70,13 +69,7 @@ class Tools:
 
     def get_button(self, container, text, underline=0, row=None, col=None):
         """button width is set in the option_db file"""
-        #w = tk.Button(container,
-        #              text=text,
-        #              underline=0,
-        #              borderwidth=1,
-        #              relief=tk.RAISED,
-        #              padx=5, pady=5,)
-
+       
         w = ttk.Button(container, text=text, underline=underline)
 
         if row is not None:
@@ -190,8 +183,6 @@ class Tools:
 
     def get_save_cancel(self, caller, container):
 
-        #get_button(self, container, text, underline=0, row=None, col=None)
-
         caller.btnSave = self.get_button(container, "Save", 0, 0, 2)
         caller.btnSave.bind("<KP_Enter>", caller.on_save)
         caller.btnSave.bind("<Button-1>", caller.on_save)
@@ -206,8 +197,6 @@ class Tools:
 
     def get_dir_cancel(self, caller, container):
 
-        #get_button(self, container, text, underline=0, row=None, col=None)
-
         caller.btnDir = self.get_button(container, "Choice", 0)
         caller.btnDir.bind("<Button-1>", caller.on_choice_a_dir)
         caller.btCancel = self.get_button(container, "Close", 0)
@@ -218,8 +207,6 @@ class Tools:
 
            
     def get_save_cancel_delete(self, caller, container):
-
-        #get_button(self, container, text, underline=0, row=None, col=None)
 
         caller.btnSave = self.get_button(container, "Save", 0, 0, 2)
         caller.btnSave.bind("<Button-1>", caller.on_save)
@@ -237,8 +224,6 @@ class Tools:
 
     def get_add_edit_cancel(self, caller, container):
 
-        #get_button(self, container, text, underline=0, row=None, col=None)
-
         caller.btnAdd = self.get_button(container, "Add", 0)
         caller.btnAdd.bind("<Return>", caller.on_add)
         caller.btnAdd.bind("<Button-1>", caller.on_add)
@@ -250,7 +235,6 @@ class Tools:
         caller.bind("<Alt-a>", caller.on_add)
         caller.bind("<Alt-e>", caller.on_edit)
         caller.bind("<Alt-c>", caller.on_cancel)
-
 
     def get_add_cancel(self, parent, container):
 
@@ -363,15 +347,7 @@ class Tools:
 
         return (caller.register(self.validate_text),
                 '%i', '%P', )
-
-    def get_validate_integer(self, caller):
-        return (caller.register(self.validate_integer),
-                '%d', '%i', '%P', '%s', '%S', '%v', '%V', '%W')
-
-    def get_validate_float(self, caller):
-        return (caller.register(self.validate_float),
-                '%d', '%i', '%P', '%s', '%S', '%v', '%V', '%W')
-
+    
 
     def limit_chars(self, c, v, *args):
         #print(x,args)
@@ -385,11 +361,11 @@ class Tools:
             return True
         except ValueError:
             return False
-                 
+    
+    def get_validate_integer(self, caller):
+        return (caller.register(self.set_validate_integer),'%d', '%P', '%S',)         
 
-    def validate_integer(self, action, index, value_if_allowed,
-                         prior_value, text, validation_type,
-                         trigger_type, widget_name):
+    def set_validate_integer(self, action, value_if_allowed, text,):
         # action=1 -> insert
         if action == '1':
             if text in '0123456789':
@@ -403,9 +379,10 @@ class Tools:
         else:
             return True
 
-    def validate_float(self, action, index, value_if_allowed,
-                       prior_value, text, validation_type,
-                       trigger_type, widget_name):
+    def get_validate_float(self, caller):
+        return (caller.register(self.set_validate_float),'%d', '%P', '%S',)
+
+    def set_validate_float(self, action, value_if_allowed, text):
         # action=1 -> insert
         if action == "1":
             if text in '0123456789.-+':
@@ -420,7 +397,6 @@ class Tools:
             return True
 
     def on_to_assign(self, caller, evt=None):
-
         msg = "To do!"
         messagebox.showwarning(self.title, msg, )
 
@@ -442,7 +418,6 @@ class Tools:
             print(widg)
             print('\nWidget Name: {}'.format(widg.winfo_class()))
             #keys = widg.keys()
-
 
 
 def main():
