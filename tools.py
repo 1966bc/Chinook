@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-"""
-project:  biochemiae
-mailto:   [giuseppecostanzi@gmail.com]
-modify:   spring 2020
-@author: 1966bc
-"""
+#!/usr/bin/python3
+#-----------------------------------------------------------------------------
+# project:  all
+# authors:  1966bc
+# mailto:   [giuseppecostanzi@gmail.com]
+# modify:   hiems MMXX
+#-----------------------------------------------------------------------------
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import font
